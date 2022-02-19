@@ -39,6 +39,25 @@ function App() {
   }
   // #endregion ====
 
+
+  // #region ==== UPDATE GALLERY ITEM ====
+  const updateLikeCount = (id) => {
+    console.log('in updateLikeCount', id);
+
+    axios({
+      method: 'PUT',
+      url: `/gallery/like/${id}`,
+    }).then((response) => {
+      console.log('Response from PUT:', response);
+
+      // re-render page with most recent list of gallery items from server
+      getGalleryItems();
+    }).catch((error) => {
+      console.log('Error from PUT:', error);
+    })
+  }
+  // #region ====
+
   console.log('Gallery items array:', galleryItems);
 
   return (
@@ -49,6 +68,7 @@ function App() {
       <main>
         <GalleryList
           galleryItems={galleryItems}
+          updateLikeCount={updateLikeCount}
         />
       </main>
     </div>
