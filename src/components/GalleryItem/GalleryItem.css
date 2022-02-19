@@ -1,4 +1,27 @@
+.galleryItemContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
 .galleryImage {
-    height: 100px;
-    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+}
+
+.galleryDescription {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
 }

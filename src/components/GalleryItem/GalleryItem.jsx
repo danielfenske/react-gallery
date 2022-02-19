@@ -1,7 +1,13 @@
-import './GalleryItem.css'
+import './GalleryItem.css';
 import { useState } from 'react';
 
 const GalleryItem = ({ galleryItem }) => {
+
+    let path = galleryItem.path;
+    let title = galleryItem.title;
+    let description = galleryItem.description;
+    let location = galleryItem.location;
+    let likes = galleryItem.likes 
 
     const [showImage, setShowImage] = useState(true);
 
@@ -9,6 +15,14 @@ const GalleryItem = ({ galleryItem }) => {
         console.log('in handleImageClick');
 
         setShowImage(!showImage);
+    }
+
+    const handleLikeButton = () => {
+        console.log('in handleLikeButton');
+
+        likes = likes + 1;
+    
+        console.log(likes);
     }
 
     return (
@@ -19,19 +33,25 @@ const GalleryItem = ({ galleryItem }) => {
                     {
                         showImage ?
                                 <img
-                                src={galleryItem.path}
+                                src={path}
                                 className="galleryImage"
                                 onClick={handleImageContainerClick}
                                 />
-                            :   <p
+                            :   <div
+                                className="galleryDescription"
                                 onClick={handleImageContainerClick}
                                 >
-                                {galleryItem.description}
-                                </p>
+                                {description}
+                                </div>
                     }
                 </div>
-                <h1>{galleryItem.location}</h1>
-                <p>Likes: {galleryItem.likes}</p>
+                <h1>{location}</h1>
+                <p>Likes: {likes}</p>
+                <button
+                    onClick={handleLikeButton}
+                >
+                    Like
+                </button>
             </div>
         </>
     )
