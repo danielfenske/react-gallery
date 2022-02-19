@@ -1,3 +1,5 @@
+// import GalleryItem component
+import GalleryItem from '../GalleryItem/GalleryItem'
 
 const GalleryList = ({ galleryItems }) => {
     console.log('in GalleryList component', galleryItems);
