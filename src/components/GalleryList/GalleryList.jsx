@@ -2,7 +2,7 @@
 import GalleryItem from '../GalleryItem/GalleryItem'
 import './GalleryList.css';
 
-const GalleryList = ({ galleryItems }) => {
+const GalleryList = ({ galleryItems, updateLikeCount }) => {
     console.log('in GalleryList component', galleryItems);
     return (
         <>
@@ -11,6 +11,7 @@ const GalleryList = ({ galleryItems }) => {
                     (<GalleryItem
                         galleryItem={galleryItem}
                         key={galleryItem.id}
+                        updateLikeCount={updateLikeCount}
                     />)
                 )}
             </div>
