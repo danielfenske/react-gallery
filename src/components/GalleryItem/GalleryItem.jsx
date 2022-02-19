@@ -1,4 +1,4 @@
-import './GalleryItem.css'
+import './GalleryItem.css';
 import { useState } from 'react';
 
 const GalleryItem = ({ galleryItem }) => {
@@ -9,6 +9,14 @@ const GalleryItem = ({ galleryItem }) => {
         console.log('in handleImageClick');
 
         setShowImage(!showImage);
+    }
+
+    const handleLikeButton = () => {
+        console.log('in handleLikeButton');
+
+        galleryItem.likes = galleryItem.likes + 1;
+
+        console.log('galleryItem.likes:', galleryItem.likes);
     }
 
     return (
@@ -23,15 +31,21 @@ const GalleryItem = ({ galleryItem }) => {
                                 className="galleryImage"
                                 onClick={handleImageContainerClick}
                                 />
-                            :   <p
+                            :   <div
+                                className="galleryDescription"
                                 onClick={handleImageContainerClick}
                                 >
                                 {galleryItem.description}
-                                </p>
+                                </div>
                     }
                 </div>
                 <h1>{galleryItem.location}</h1>
                 <p>Likes: {galleryItem.likes}</p>
+                <button
+                    onClick={handleLikeButton}
+                >
+                    Like
+                </button>
             </div>
         </>
     )
