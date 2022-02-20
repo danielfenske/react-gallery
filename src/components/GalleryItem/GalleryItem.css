@@ -1,17 +1,34 @@
-.galleryItemContainer {
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.galleryCover, .galleryDescription {
+  display: flex;
+  justify-content: flex-start;
   width: 300px;
   height: 300px;
-  display: block;
+  position: relative;
+}
+
+.galleryCover div, .galleryDescription div {
+  position: absolute;
+}
+
+.galleryDescription {
+  width: 300px;
+  height: 300px;
 }
 
 img {
   width: 300px;
   height: 300px;
-}
+} 
 
 .titleText {
   font-size: 18px;
-  transform: translateY(-50vh);
+  padding-top: 10px;
+  padding-left: 10px;
 }
 
 .likesText {
@@ -28,9 +45,13 @@ img {
 
 p {
   font-size: 14px;
-  transform: translateY(-50vh);
 }
 
-.backgroundImage {
-  filter: grayscale(100%);
+.galleryImage {
+  cursor: pointer;
+}
+
+.galleryDescription {
+  cursor: pointer;
+  filter: grayscale(1);
 }

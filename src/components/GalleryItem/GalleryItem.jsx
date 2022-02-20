@@ -34,18 +34,17 @@ const GalleryItem = ({ galleryItem, updateLikeCount }) => {
 
     return (
         <>
-            <div className="galleryItemContainer">
                 {
                     showImage ?
                             <div
-                            className="galleryImage"
+                            className="galleryCover"
                             onClick={handleImageContainerClick}
                             >
-                                
+
                             <img src={path}/>
                             <div><h1 className="titleText">{title}</h1></div>
-                            <div>
-                                <div><button onClick={handleLikeButton}>Like</button><h1 className='likesText'>{likes}</h1></div>
+                            <div className='galleryFooter'>
+                                {/* <div><button onClick={handleLikeButton}>Like</button><h1 className='likesText'>{likes}</h1></div> */}
                                 <div><h1 className="locationText">{location}</h1></div>
                             </div>
                             
@@ -58,11 +57,11 @@ const GalleryItem = ({ galleryItem, updateLikeCount }) => {
 
                             <img className="backgroundImage" src={path}/>
                             <div><h1 className="monthText">{month}</h1></div>
-                            <div><p>{description}</p></div>
+                            {/* <div><p>{description}</p></div> */}
+                            
                             </div>
 
                 }
-            </div>
         </>
     )
 }
