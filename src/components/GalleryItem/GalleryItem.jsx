@@ -1,6 +1,9 @@
 import './GalleryItem.css';
 import { useState } from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faHeart} from '@fortawesome/free-regular-svg-icons'
+
 const GalleryItem = ({ galleryItem, updateLikeCount }) => {
 
     // redefine variables from galleryItem object
@@ -48,7 +51,7 @@ const GalleryItem = ({ galleryItem, updateLikeCount }) => {
                             <h1 className="titleText">{title}</h1>
                             
                             <div className='galleryFooter'>
-                                <div><button className="likeButton" onClick={handleLikeButton}>Like</button><h1 className='likesText'>{likes}</h1></div>
+                                <div><FontAwesomeIcon icon={faHeart} inverse onClick={handleLikeButton} /><h1 className='likesText'>{likes}</h1></div>
                                 <h1 className="locationText">{location}</h1>
                             </div>
                         </div>
@@ -67,7 +70,7 @@ const GalleryItem = ({ galleryItem, updateLikeCount }) => {
                             <p>{description}</p>
                             
                             <div className='galleryFooter'>
-                                <div><button className="likeButton" onClick={handleLikeButton}>Like</button><h1 className='likesText'>{likes}</h1></div>
+                                <div><FontAwesomeIcon icon={faHeart} inverse onClick={handleLikeButton} /><h1 className='likesText'>{likes}</h1></div>
                                 <h1 className="locationText">{location}</h1>
                             </div>
                         </div>

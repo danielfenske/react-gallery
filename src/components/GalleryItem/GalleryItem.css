@@ -3,24 +3,26 @@
   padding: 0;
 }
 
-.galleryCover, .galleryDescription {
+.galleryCover,
+.galleryDescription {
   /* POSITIONING */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
+
   height: 300px;
   width: 300px;
 
   cursor: pointer;
+  box-shadow: 0px 5px 10px rgb(58, 54, 54);
 }
 
 .galleryCover {
-  background: linear-gradient(rgba(0, 0, 0, .25),rgba(0, 0, 0, .25));
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
 }
 
 .galleryDescription {
-  background: linear-gradient(rgba(0, 0, 0, .65),rgba(0, 0, 0, 0.65));
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
 }
 
 img {
@@ -33,7 +35,7 @@ img {
 }
 
 .galleryDescription img {
-  filter: grayscale(1);
+  filter: grayscale(0.6);
 }
 
 .galleryFooter {
@@ -48,7 +50,7 @@ img {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 10px;
+  padding-left: 20px;
   padding-bottom: 10px;
   gap: 5px;
 }
@@ -59,6 +61,7 @@ img {
   text-align: left;
   padding-left: 10px;
   padding-top: 10px;
+  padding-bottom: 10px;
   color: white;
 }
 
@@ -70,7 +73,7 @@ img {
 
 .locationText {
   font-size: 16px;
-  padding-right: 10px;
+  padding-right: 20px;
   padding-bottom: 10px;
   color: white;
   font-weight: 400;
@@ -78,12 +81,13 @@ img {
 
 .monthText {
   padding-top: 60px;
-  font-size: 16px;
+  font-size: 18px;
   color: white;
 }
 
 p {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 100;
   color: white;
   padding-left: 30px;
   padding-right: 30px;
