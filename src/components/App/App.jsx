@@ -8,6 +8,11 @@ import { useEffect, useState } from 'react';
 import GalleryList from '../GalleryList/GalleryList';
 
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+
+
 function App() {
   const [galleryItems, setGalleryItems] = useState([]);
 
