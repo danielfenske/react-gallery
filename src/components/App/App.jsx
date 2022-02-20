@@ -56,7 +56,7 @@ function App() {
       console.log('Error from PUT:', error);
     })
   }
-  // #region ====
+  // #endregion ====
 
   console.log('Gallery items array:', galleryItems);
 
