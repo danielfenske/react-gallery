@@ -9,6 +9,7 @@ const GalleryItem = ({ galleryItem, updateLikeCount }) => {
     let description = galleryItem.description;
     let location = galleryItem.location;
     let likes = galleryItem.likes;
+    let month = galleryItem.month
     
     // use state for image, which will toggle on click
     const [showImage, setShowImage] = useState(true);
@@ -34,30 +35,33 @@ const GalleryItem = ({ galleryItem, updateLikeCount }) => {
     return (
         <>
             <div className="galleryItemContainer">
-                <h1>{title}</h1>
-                <div className="imageContainer">
-                    {
-                        showImage ?
-                                <img
-                                src={path}
-                                className="galleryImage"
-                                onClick={handleImageContainerClick}
-                                />
-                            :   <div
-                                className="galleryDescription"
-                                onClick={handleImageContainerClick}
-                                >
-                                {description}
-                                </div>
-                    }
-                </div>
-                <h1>{location}</h1>
-                <p>Likes: {likes}</p>
-                <button
-                    onClick={handleLikeButton}
-                >
-                    Like
-                </button>
+                {
+                    showImage ?
+                            <div
+                            className="galleryImage"
+                            onClick={handleImageContainerClick}
+                            >
+                                
+                            <img src={path}/>
+                            <div><h1 className="titleText">{title}</h1></div>
+                            <div>
+                                <div><button onClick={handleLikeButton}>Like</button><h1 className='likesText'>{likes}</h1></div>
+                                <div><h1 className="locationText">{location}</h1></div>
+                            </div>
+                            
+                            </div>
+
+                        :   <div
+                            className="galleryDescription"
+                            onClick={handleImageContainerClick}
+                            >
+
+                            <img className="backgroundImage" src={path}/>
+                            <div><h1 className="monthText">{month}</h1></div>
+                            <div><p>{description}</p></div>
+                            </div>
+
+                }
             </div>
         </>
     )

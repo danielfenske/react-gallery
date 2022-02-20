@@ -1,27 +1,36 @@
 .galleryItemContainer {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
+  width: 300px;
+  height: 300px;
+  display: block;
 }
 
-.galleryImage {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-    width: 300px;
+img {
+  width: 300px;
+  height: 300px;
 }
 
-.galleryDescription {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-    width: 300px;
+.titleText {
+  font-size: 18px;
+  transform: translateY(-50vh);
+}
+
+.likesText {
+  font-size: 16px;
+}
+
+.locationText {
+  font-size: 16px;
+}
+
+.monthText {
+  font-size: 16px;
 }
 
 p {
-    margin: 0;
-    padding: 0;
+  font-size: 14px;
+  transform: translateY(-50vh);
+}
+
+.backgroundImage {
+  filter: grayscale(100%);
 }
