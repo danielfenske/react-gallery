@@ -36,31 +36,41 @@ const GalleryItem = ({ galleryItem, updateLikeCount }) => {
         <>
                 {
                     showImage ?
-                            <div
-                            className="galleryCover"
-                            onClick={handleImageContainerClick}
-                            >
-
-                            <img src={path}/>
-                            <div><h1 className="titleText">{title}</h1></div>
+                        <div 
+                        className="galleryCover"
+                        onClick={handleImageContainerClick}
+                        >
+                            <img 
+                            width="300"
+                            src={path}
+                            />
+                            
+                            <h1 className="titleText">{title}</h1>
+                            
                             <div className='galleryFooter'>
-                                {/* <div><button onClick={handleLikeButton}>Like</button><h1 className='likesText'>{likes}</h1></div> */}
-                                <div><h1 className="locationText">{location}</h1></div>
+                                <div><button onClick={handleLikeButton}>Like</button><h1 className='likesText'>{likes}</h1></div>
+                                <h1 className="locationText">{location}</h1>
                             </div>
+                        </div>
+
+                        :   
+                        <div 
+                        className="galleryDescription"
+                        onClick={handleImageContainerClick}
+                        >
+                            <img 
+                            width="300"
+                            src={path}
+                            />
                             
-                            </div>
-
-                        :   <div
-                            className="galleryDescription"
-                            onClick={handleImageContainerClick}
-                            >
-
-                            <img className="backgroundImage" src={path}/>
-                            <div><h1 className="monthText">{month}</h1></div>
-                            {/* <div><p>{description}</p></div> */}
+                            <h1 className="monthText">{month}</h1>
+                            <p>{description}</p>
                             
+                            <div className='galleryFooter'>
+                                <div><button onClick={handleLikeButton}>Like</button><h1 className='likesText'>{likes}</h1></div>
+                                <h1 className="locationText">{location}</h1>
                             </div>
-
+                        </div>
                 }
         </>
     )
