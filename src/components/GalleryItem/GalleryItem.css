@@ -11,11 +11,29 @@
   
   height: 300px;
   width: 300px;
+
+  cursor: pointer;
+}
+
+.galleryCover {
+  background: linear-gradient(rgba(0, 0, 0, .25),rgba(0, 0, 0, .25));
+}
+
+.galleryDescription {
+  background: linear-gradient(rgba(0, 0, 0, .65),rgba(0, 0, 0, 0.65));
 }
 
 img {
   position: absolute;
   z-index: -1;
+}
+
+.likeButton {
+  z-index: 2;
+}
+
+.galleryDescription img {
+  filter: grayscale(1);
 }
 
 .galleryFooter {
@@ -47,6 +65,7 @@ img {
 .likesText {
   font-size: 16px;
   color: white;
+  font-weight: 400;
 }
 
 .locationText {
@@ -54,4 +73,19 @@ img {
   padding-right: 10px;
   padding-bottom: 10px;
   color: white;
+  font-weight: 400;
+}
+
+.monthText {
+  padding-top: 60px;
+  font-size: 16px;
+  color: white;
+}
+
+p {
+  font-size: 14px;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 60px;
 }

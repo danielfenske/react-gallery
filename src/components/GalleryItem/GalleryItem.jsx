@@ -48,7 +48,7 @@ const GalleryItem = ({ galleryItem, updateLikeCount }) => {
                             <h1 className="titleText">{title}</h1>
                             
                             <div className='galleryFooter'>
-                                <div><button onClick={handleLikeButton}>Like</button><h1 className='likesText'>{likes}</h1></div>
+                                <div><button className="likeButton" onClick={handleLikeButton}>Like</button><h1 className='likesText'>{likes}</h1></div>
                                 <h1 className="locationText">{location}</h1>
                             </div>
                         </div>
@@ -67,7 +67,7 @@ const GalleryItem = ({ galleryItem, updateLikeCount }) => {
                             <p>{description}</p>
                             
                             <div className='galleryFooter'>
-                                <div><button onClick={handleLikeButton}>Like</button><h1 className='likesText'>{likes}</h1></div>
+                                <div><button className="likeButton" onClick={handleLikeButton}>Like</button><h1 className='likesText'>{likes}</h1></div>
                                 <h1 className="locationText">{location}</h1>
                             </div>
                         </div>
