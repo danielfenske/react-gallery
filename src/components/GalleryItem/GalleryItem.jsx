@@ -41,15 +41,16 @@ const GalleryItem = ({ galleryItem, updateLikeCount }) => {
                     showImage ?
                         <div 
                         className="galleryCover"
-                        onClick={handleImageContainerClick}
                         >
                             <img 
-                            width="300"
+                            width="250"
                             src={path}
                             />
+                                                    
+                            <h1 className="titleText" onClick={handleImageContainerClick}>{title}</h1>
                             
-                            <h1 className="titleText">{title}</h1>
-                            
+                            <div className="itemBody" onClick={handleImageContainerClick}></div>
+
                             <div className='galleryFooter'>
                                 <div><FontAwesomeIcon icon={faHeart} inverse onClick={handleLikeButton} /><h1 className='likesText'>{likes}</h1></div>
                                 <h1 className="locationText">{location}</h1>
@@ -62,7 +63,7 @@ const GalleryItem = ({ galleryItem, updateLikeCount }) => {
                         onClick={handleImageContainerClick}
                         >
                             <img 
-                            width="300"
+                            width="250"
                             src={path}
                             />
                             
