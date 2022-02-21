@@ -52,7 +52,7 @@ const GalleryItem = ({ galleryItem, updateLikeCount }) => {
                             <div className="itemBody" onClick={handleImageContainerClick}></div>
 
                             <div className='galleryFooter'>
-                                <div><FontAwesomeIcon icon={faHeart} inverse onClick={handleLikeButton} /><h1 className='likesText'>{likes}</h1></div>
+                                <div onClick={handleLikeButton}><FontAwesomeIcon icon={faHeart} inverse/><h1 className='likesText'>{likes}</h1></div>
                                 <h1 className="locationText">{location}</h1>
                             </div>
                         </div>
@@ -71,7 +71,7 @@ const GalleryItem = ({ galleryItem, updateLikeCount }) => {
                             <p>{description}</p>
                             
                             <div className='galleryFooter'>
-                                <div><FontAwesomeIcon icon={faHeart} inverse onClick={handleLikeButton} /><h1 className='likesText'>{likes}</h1></div>
+                                <div onClick={handleLikeButton}><FontAwesomeIcon icon={faHeart} inverse/><h1 className='likesText'>{likes}</h1></div>
                                 <h1 className="locationText">{location}</h1>
                             </div>
                         </div>
