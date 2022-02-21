@@ -28,11 +28,11 @@ Below are a few steps I took to ensure project satisfaction:
 ![Wireframe](./wireframes/image-gallery-wireframe.png)
 
 ### Built with:
-- React.jsx
+- React
 - CSS3 
-- JavaScript
-- jQuery    
+- Node.js
+- postgreSQL   
 
 ### Acknowledgement
 
-This project is implemented into the curriculum taught at Prime Academy to strengthen our understanding of HTML, CSS3, and Javascript.
+This project is implemented into the curriculum taught at Prime Academy to strengthen our understanding of react as it relates to the fullstack.
