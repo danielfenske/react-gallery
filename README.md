@@ -25,7 +25,7 @@ Below are a few steps I took to ensure project satisfaction:
 
 ## Wireframe
 
-![Wireframe](./wireframes/image-gallery-wireframe.png)
+![Wireframe](./wireframes/image-gallery.gif)
 
 ### Built with:
 - React
